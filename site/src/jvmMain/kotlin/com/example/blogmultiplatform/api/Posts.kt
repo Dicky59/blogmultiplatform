@@ -123,7 +123,7 @@ suspend fun searchPostsByTitle(context: ApiContext) {
     try {
         val query = context.req.params[QUERY_PARAM] ?: ""
         val skip = context.req.params[SKIP_PARAM]?.toInt() ?: 0
-        val posts = context.data.getValue<MongoDB>().searchPostsByTittle(
+        val posts = context.data.getValue<MongoDB>().searchPostsByTitle(
             query = query,
             skip = skip
         )
